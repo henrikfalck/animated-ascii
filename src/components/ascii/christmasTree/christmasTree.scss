@@ -1,0 +1,51 @@
+@import "../../../styles/colors";
+
+.christmastree {
+  color: $green;
+
+  .yellow {
+    color: $gold;
+  }
+
+  .light {
+    will-change: color;
+    color: $red;
+    animation: ChangeColor 6s ease infinite normal both running;
+
+    @for $i from 1 through 17 {
+      &:nth-of-type(#{$i}) {
+        animation-delay: $i * 0.5s;
+      }
+    }
+  }
+
+  .pot {
+    color: sandybrown !important;
+  }
+}
+
+@keyframes ChangeColor {
+  0% {
+    color: $red;
+  }
+
+  20% {
+    color: $blue;
+  }
+
+  40% {
+    color: $orange;
+  }
+
+  60% {
+    color: $purple;
+  }
+
+  80% {
+    color: $gold;
+  }
+
+  100% {
+    color: $red;
+  }
+}
