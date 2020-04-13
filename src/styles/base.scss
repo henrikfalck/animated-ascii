@@ -1,5 +1,8 @@
 // Base
+@import "./_colors";
+@import "./_typography";
 
 body {
-  background: black;
+  background: $black;
+  color: white;
 }
